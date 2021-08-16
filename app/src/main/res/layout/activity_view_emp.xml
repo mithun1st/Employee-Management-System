@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewEmp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="#553778"
+        android:text="View Profile"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <AutoCompleteTextView
+            android:id="@+id/actv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background1"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:layout_marginRight="9dp"
+            android:layout_marginLeft="9dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:hint="Type ID/Name to Search Employee"/>
+    </LinearLayout>
+
+
+<!--    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:gravity="center"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+                    android:textSize="20sp"
+                    android:text="ID Number:"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_short_text_24"
+                android:textSize="20sp"
+                android:text="Name:"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:textSize="20sp"
+                android:text="Designation:"/>
+
+            <TextView
+                android:id="@+id/tvDesig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                android:textSize="20sp"
+                android:text="Phone:"/>
+
+            <TextView
+                android:id="@+id/tvPhn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:textSize="20sp"
+                android:text="E-mail:"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+                android:textSize="20sp"
+                android:text="Salary:"/>
+
+            <TextView
+                android:id="@+id/tvSalary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:textSize="20sp"
+                android:text="Joining:"/>
+
+            <TextView
+                android:id="@+id/tvJoin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="17dp"
+            android:text="View Details"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

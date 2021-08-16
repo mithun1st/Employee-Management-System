@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class DB1 extends SQLiteOpenHelper {
 
     static String dbName="empDatabase.db";
@@ -81,5 +83,54 @@ public class DB1 extends SQLiteOpenHelper {
             e.printStackTrace();
             return e.toString();
         }
+    }
+
+    public Cursor ViewEmpDB(String s){
+        Cursor cu=null;
+
+        String q1;
+
+        try{
+            Integer.parseInt(s);
+            q1="SELECT * FROM "+tabName+" WHERE "+col1+" = "+s+";";
+            System.out.println(q1);
+        }catch (Exception e){
+            q1="SELECT * FROM "+tabName+" WHERE "+col2+" = \'"+s+"\';";
+            System.out.println(q1);
+        }
+
+        try{
+            cu=db.rawQuery(q1,null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return cu;
+    }
+
+    public ArrayList<String> adapterIdName(){
+
+        ArrayList<String> ar=new ArrayList<>(0);
+
+        Cursor cu=null;
+        String q1="SELECT "+col1+", "+col2+" FROM "+ tabName;
+        System.out.println(q1);
+
+        try{
+            cu=db.rawQuery(q1,null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        while (cu.moveToNext()){
+            ar.add(cu.getString(0).toString());
+        }
+
+        while (cu.moveToNext()){
+            ar.add(cu.getString(1).toString());
+        }
+
+
+        return ar;
     }
 }

@@ -6,18 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class StuffList extends AppCompatActivity {
+public class ListEmp extends AppCompatActivity {
 
     private ListView lv;
 
@@ -40,8 +38,8 @@ public class StuffList extends AppCompatActivity {
         lv=findViewById(R.id.stuffListId);
 
 
-        Cursor cu=new DB1(StuffList.this).readAllStuffFromDb();
-        Toast.makeText(StuffList.this,"Total "+cu.getCount()+" Record Found",Toast.LENGTH_SHORT);
+        Cursor cu=new DB1(ListEmp.this).readAllStuffFromDb();
+        Toast.makeText(ListEmp.this,"Total "+cu.getCount()+" Record Found",Toast.LENGTH_SHORT);
         while (cu.moveToNext()){
             id.add(cu.getString(0));
             name.add(cu.getString(1));
@@ -53,7 +51,7 @@ public class StuffList extends AppCompatActivity {
         }
 
 
-        StuffAdapterClass sac=new StuffAdapterClass(StuffList.this, name, id);
+        StuffAdapterClass sac=new StuffAdapterClass(ListEmp.this, name, id);
         lv.setAdapter(sac);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,21 +60,13 @@ public class StuffList extends AppCompatActivity {
                 dialog(i);
             }
         });
-
-
     }
 
     public void dialog(int i){
         adb=new AlertDialog.Builder(this);
-        adb.setTitle("Detail's Of- "+name.get(i).toUpperCase());
+        adb.setTitle("Employee Record");
         adb.setIcon(R.drawable.ic_baseline_work_24);
-        adb.setMessage("\n \tID: "+id.get(i)+"\n"+
-                "\tName: "+name.get(i)+"\n"+
-                "\tDesignation: "+designation.get(i)+"\n"+
-                "\tPhone: "+phone.get(i)+"\n"+
-                "\tMail: "+mail.get(i)+"\n"+
-                "\tSalary: "+id.get(i)+"\n"+
-                "\tJoin: "+join.get(i));
+        adb.setMessage("Detail's Of- "+name.get(i).toUpperCase());
 
         adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             @Override
@@ -84,6 +74,29 @@ public class StuffList extends AppCompatActivity {
                 dialogInterface.dismiss();
             }
         });
+
+        //setView
+        LayoutInflater li=getLayoutInflater();
+        View v=li.inflate(R.layout.x_dialog_view, null,false);
+
+        TextView tvid=v.findViewById(R.id.tvId);
+        TextView tvname=v.findViewById(R.id.tvName);
+        TextView tvdesig=v.findViewById(R.id.tvDesig);
+        TextView tvphone=v.findViewById(R.id.tvPhn);
+        TextView tvmail=v.findViewById(R.id.tvEmail);
+        TextView tvsalary=v.findViewById(R.id.tvSalary);
+        TextView tvjoin=v.findViewById(R.id.tvJoin);
+
+        tvid.setText(id.get(i));
+        tvname.setText(name.get(i));
+        tvdesig.setText(designation.get(i));
+        tvphone.setText(phone.get(i));
+        tvmail.setText(mail.get(i));
+        tvsalary.setText(salary.get(i));
+        tvjoin.setText(join.get(i));
+
+        adb.setView(v);
+
         ad=adb.create();
         ad.show();
     }

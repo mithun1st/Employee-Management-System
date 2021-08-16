@@ -13,9 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button addEmp, viewEmp, editEmp, removeEmp , listEmp;
@@ -81,8 +78,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
 
+        if(view.getId()==R.id.viewEmp){
+            Intent i=new Intent(MainActivity.this, ViewEmp.class);
+            startActivity(i);
+        }
+        if(view.getId()==R.id.editEmp){
+
+        }
+        if(view.getId()==R.id.removeEmp){
+
+        }
+
         if(view.getId()==R.id.stuffListButtonId){
-            Intent i=new Intent(MainActivity.this, StuffList.class);
+            Intent i=new Intent(MainActivity.this, ListEmp.class);
             startActivity(i);
         }
 

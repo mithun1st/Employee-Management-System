@@ -2,15 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#CBF6F3"
+    android:background="#E6E6E6"
     android:padding="10dp"
     android:layout_height="match_parent">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="#553778"
+        android:text="Edit Employee Info"/>
     <ListView
         android:id="@+id/stuffListId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:dividerHeight="10dp"
-        android:divider="#CBF6F3"/>
+        android:divider="#E6E6E6"/>
 
 </LinearLayout>

@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeManagementSystem">
         <activity
+            android:name=".EditDeta"
+            android:exported="true" />
+        <activity
+            android:name=".ViewEmp"
+            android:exported="true" />
+        <activity
             android:name=".AddEmp"
             android:exported="true" />
         <activity
-            android:name=".StuffList"
+            android:name=".ListEmp"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
