@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_launcher1_foreground"
+        android:gravity="center"
+        android:typeface="serif"
+        android:text="Employee Management System"
+        android:textColor="#130129"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/appTitle"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#000"
+        android:backgroundTint="#057107"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/addEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Employee"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_person_add_24"
+            android:background="@drawable/main_button_background"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/viewEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Profile"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_person_search_24"
+            android:background="@drawable/main_button_background"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/editEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Details"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
+            android:background="@drawable/main_button_background"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/removeEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove Employee"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_person_remove_24"
+            android:background="@drawable/main_button_background"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/stuffListButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Stuff List"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_baseline_people_24"
+            android:background="@drawable/main_button_background"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

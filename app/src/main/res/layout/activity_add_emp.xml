@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEmp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="#553778"
+        android:text="Add Employee"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+                android:textSize="20sp"
+                android:text="ID No:"/>
+
+            <EditText
+                android:id="@+id/etid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Enter The ID Number"
+                android:inputType="number"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_short_text_24"
+                android:textSize="20sp"
+                android:text="Name:"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Type Employee name"
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:textSize="20sp"
+                android:text="Desig:"/>
+
+            <EditText
+                android:id="@+id/etDesig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Input Designation Here"
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                android:textSize="20sp"
+                android:text="Phone:"/>
+
+            <EditText
+                android:id="@+id/etPhn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:textSize="20sp"
+                android:text="E-mail:"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Enter E-mail Address"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+                android:textSize="20sp"
+                android:text="Salary:"/>
+
+            <EditText
+                android:id="@+id/etSalary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Employee Salary"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addEmp"
+            android:background="#4A9F00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginLeft="9dp"
+            android:paddingLeft="9dp"
+            android:text="Submit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_baseline_person_add_alt_1_24"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#CBF6F3"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/stuffListId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"
+        android:divider="#CBF6F3"/>
+
+</LinearLayout>
