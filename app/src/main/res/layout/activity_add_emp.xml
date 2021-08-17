@@ -202,7 +202,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addEmp"
-            android:background="#4A9F00"
+            android:background="#54B501"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -210,11 +210,9 @@
             android:layout_marginLeft="9dp"
             android:paddingLeft="9dp"
             android:text="Submit"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            android:typeface="monospace"
-            android:textColor="#FFFFFF"
-            android:drawableLeft="@drawable/ic_baseline_person_add_alt_1_24"/>
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 

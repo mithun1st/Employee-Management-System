@@ -60,7 +60,8 @@ public class DB1 extends SQLiteOpenHelper {
     }
 
 
-    //operation
+    //--------------------------------------------operation
+    //read
     public Cursor readAllStuffFromDb(){
         Cursor cu=null;
         String q1="SELECT * FROM "+ tabName;
@@ -73,6 +74,7 @@ public class DB1 extends SQLiteOpenHelper {
     }
 
 
+    //add emp
     public String addEmpData(String sid, String sname, String sdesig, String sphone, String smail, String ssalary) {
         String q="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+", "+col7+") VALUES "+" ("+sid+", '"+sname+"', '"+sdesig+"', '"+sphone+"', '"+smail+"', "+ssalary+",  CURRENT_DATE );";
         try {
@@ -85,6 +87,8 @@ public class DB1 extends SQLiteOpenHelper {
         }
     }
 
+
+    //view emp
     public Cursor ViewEmpDB(String s){
         Cursor cu=null;
 
@@ -124,12 +128,9 @@ public class DB1 extends SQLiteOpenHelper {
 
         while (cu.moveToNext()){
             ar.add(cu.getString(0).toString());
-        }
-
-        while (cu.moveToNext()){
             ar.add(cu.getString(1).toString());
         }
-
+        System.out.println(cu.getCount());
 
         return ar;
     }

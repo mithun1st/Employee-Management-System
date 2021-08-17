@@ -3,6 +3,7 @@ package com.example.employeemanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,7 +20,7 @@ public class ViewEmp extends AppCompatActivity {
 
     TextView tvid,tvname,tvdesig,tvphone,tvmail,tvsalary,tvjoin;
     AutoCompleteTextView actv;
-    Button view;
+    Button view,clear;
 
     StringBuilder id=new StringBuilder();
     StringBuilder name=new StringBuilder();
@@ -46,10 +47,12 @@ public class ViewEmp extends AppCompatActivity {
 
         actv=findViewById(R.id.actv);
         view=findViewById(R.id.view);
+        clear=findViewById(R.id.clear);
 
 
         ArrayList<String> ar=new ArrayList<>(0);
         ar=new DB1(ViewEmp.this).adapterIdName();
+        System.out.println(ar);
 
         ArrayAdapter <String> ad=new ArrayAdapter<>(ViewEmp.this, android.R.layout.simple_list_item_1, ar);
         actv.setThreshold(1);
@@ -63,6 +66,9 @@ public class ViewEmp extends AppCompatActivity {
                 cu=o.ViewEmpDB(actv.getText().toString());
                 getDataFromDB();
                 setDataToTV();
+                clearStringBuilder();
+                actv.setEnabled(false);
+                actv.setEnabled(true);
             }
         });
 
@@ -74,6 +80,7 @@ public class ViewEmp extends AppCompatActivity {
                 cu=o.ViewEmpDB(actv.getText().toString());
                 getDataFromDB();
                 setDataToTV();
+                clearStringBuilder();
             }
         });
 
@@ -81,6 +88,14 @@ public class ViewEmp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tvClear();
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvClear();
+                actv.setText("");
             }
         });
     }
@@ -116,5 +131,15 @@ public class ViewEmp extends AppCompatActivity {
         tvmail.setText("");
         tvsalary.setText("");
         tvjoin.setText("");
+    }
+
+    public void clearStringBuilder(){
+        id.setLength(0);
+        name.setLength(0);
+        designation.setLength(0);
+        phone.setLength(0);
+        mail.setLength(0);
+        salary.setLength(0);
+        join.setLength(0);
     }
 }
