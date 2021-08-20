@@ -44,7 +44,7 @@ public class DB1 extends SQLiteOpenHelper {
 
     public void fnc(){
 
-        String id="120", name="mthun",designation="teacher",phone="017",mail="yahoo", salary="5332.32";
+        String id="1220", name="mthun",designation="teacher",phone="0171",mail="yahoo1", salary="5332.32";
 
 
         String q="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+", "+col7+") VALUES "+" ("+id+", '"+name+"', '"+designation+"', '"+phone+"', '"+mail+"', "+salary+",  CURRENT_DATE );";
@@ -134,4 +134,59 @@ public class DB1 extends SQLiteOpenHelper {
 
         return ar;
     }
+
+
+    //update emp
+    public ArrayList<String> adapterId(){
+
+        ArrayList<String> ar=new ArrayList<>(0);
+
+        Cursor cu=null;
+        String q1="SELECT "+col1+" FROM "+ tabName;
+        System.out.println(q1);
+
+        try{
+            cu=db.rawQuery(q1,null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        while (cu.moveToNext()){
+            ar.add(cu.getString(0).toString());
+        }
+        System.out.println(cu.getCount());
+
+        return ar;
+    }
+
+
+    public Cursor fetchData(String id){
+        Cursor cu=null;
+
+        String q1="SELECT "+col2+", "+col3+", "+col4+", "+col5+", "+col6+" FROM "+ tabName+ " WHERE "+col1+" = "+id+";";
+        System.out.println(q1);
+
+        try{
+            cu=db.rawQuery(q1,null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return cu;
+    }
+
+    public boolean updateInfo(String id, String name, String desig, String phone,String mail, String salary){
+        String q1="UPDATE "+tabName+" SET "+col2+" = \'"+name+"\', "+col3+" = \'"+desig+"\', "+col4+" = \'"+
+                phone+"\', "+ col5+" = \'"+mail+"\' , "+col6+" = "+salary+" WHERE "+col1+" = "+id+";";
+        System.out.println(q1);
+
+        try{
+            db.execSQL(q1);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }

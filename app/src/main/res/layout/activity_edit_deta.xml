@@ -13,183 +13,226 @@
         android:layout_margin="8dp"
         android:textSize="32sp"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="9dp"
         android:textStyle="bold"
         android:textColor="#fff"
         android:background="#553778"
         android:text="Edit Employee Info"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <AutoCompleteTextView
+            android:id="@+id/actv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_credit_card_24"
-            android:textSize="20sp"
-            android:text="ID No:"/>
-
-        <EditText
-            android:id="@+id/etid"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint=" Enter The ID Number"
-            android:inputType="number"/>
+            android:background="@drawable/add_emp_background1"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:layout_marginRight="9dp"
+            android:layout_marginLeft="9dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:hint="Type Employee ID to Update Info . . ."/>
     </LinearLayout>
 
 
+<!--    -->
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_short_text_24"
-            android:textSize="20sp"
-            android:text="Name:"/>
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
 
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_short_text_24"
+                android:textSize="20sp"
+                android:text="Name:"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Edit Employee name"
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint=" Type Employee name"
-            android:inputType="text"/>
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+                android:textSize="20sp"
+                android:text="Desig:"/>
+
+            <EditText
+                android:id="@+id/etDesig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Edit Designation here"
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                android:textSize="20sp"
+                android:text="Phone:"/>
+
+            <EditText
+                android:id="@+id/etPhn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="Change Phone Number"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:textSize="20sp"
+                android:text="E-mail:"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint=" Change E-mail Address"
+                android:inputType="textEmailAddress"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_emp_background"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingRight="9dp"
+            android:paddingLeft="9dp"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+                android:textSize="20sp"
+                android:text="Salary:"/>
+
+            <EditText
+                android:id="@+id/etSalary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="Update Employee Salary"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
     </LinearLayout>
 
+<!--    -->
 
-
-    <LinearLayout
+    <RelativeLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-            android:textSize="20sp"
-            android:text="Desig:"/>
+            android:textStyle="bold"
+            android:backgroundTint="#003DB6"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="17dp"
+            android:text="Edit"/>
 
-        <EditText
-            android:id="@+id/etDesig"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint=" Input Designation Here"
-            android:inputType="text"/>
-    </LinearLayout>
+            android:textStyle="bold"
+            android:backgroundTint="#00B66D"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="17dp"
+            android:text="Update"/>
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-            android:textSize="20sp"
-            android:text="Phone:"/>
-
-        <EditText
-            android:id="@+id/etPhn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint="Enter Phone Number"
-            android:inputType="phone"/>
-    </LinearLayout>
+            android:textStyle="bold"
+            android:backgroundTint="#FF2B33"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:textSize="17dp"
+            android:text="Clear"/>
+    </RelativeLayout>
 
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_email_24"
-            android:textSize="20sp"
-            android:text="E-mail:"/>
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint=" Enter E-mail Address"
-            android:inputType="textEmailAddress"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/add_emp_background"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
-        android:paddingRight="9dp"
-        android:paddingLeft="9dp"
-        android:weightSum="8">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_attach_money_24"
-            android:textSize="20sp"
-            android:text="Salary:"/>
-
-        <EditText
-            android:id="@+id/etSalary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:hint=" Employee Salary"
-            android:inputType="numberDecimal"/>
-    </LinearLayout>
 
 </LinearLayout>
