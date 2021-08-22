@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeManagementSystem">
         <activity
+            android:name=".RemoveEmp"
+            android:exported="true" />
+        <activity
             android:name=".EditDeta"
             android:exported="true" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".AddEmp"
             android:exported="true" />
         <activity
-            android:name=".ListEmp"
+            android:name=".StuffList"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -42,24 +42,6 @@ public class DB1 extends SQLiteOpenHelper {
     }
 
 
-    public void fnc(){
-
-        String id="1220", name="mthun",designation="teacher",phone="0171",mail="yahoo1", salary="5332.32";
-
-
-        String q="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+", "+col7+") VALUES "+" ("+id+", '"+name+"', '"+designation+"', '"+phone+"', '"+mail+"', "+salary+",  CURRENT_DATE );";
-        Log.v("sql1",q);
-
-
-        try {
-            db.execSQL(q);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-
     //--------------------------------------------operation
     //read
     public Cursor readAllStuffFromDb(){
@@ -184,6 +166,21 @@ public class DB1 extends SQLiteOpenHelper {
             db.execSQL(q1);
             return true;
         }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    //delete emp
+    public boolean deleteEmp(String id){
+        String q="DELETE FROM "+tabName+" WHERE "+col1+" = "+id+";";
+        System.out.println(q);
+
+        try{
+            db.execSQL(q);
+            return true;
+        }
+        catch (Exception e){
             e.printStackTrace();
             return false;
         }

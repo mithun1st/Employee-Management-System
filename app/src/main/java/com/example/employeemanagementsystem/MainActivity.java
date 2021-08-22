@@ -11,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editEmp.setOnClickListener(this);
         removeEmp.setOnClickListener(this);
         listEmp.setOnClickListener(this);
-
 
 
         //initial database
@@ -89,11 +87,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         if(view.getId()==R.id.removeEmp){
+            Intent i =new Intent(MainActivity.this, RemoveEmp.class);
+            startActivity(i);
 
         }
 
         if(view.getId()==R.id.stuffListButtonId){
-            Intent i=new Intent(MainActivity.this, ListEmp.class);
+            Intent i=new Intent(MainActivity.this, StuffList.class);
             startActivity(i);
         }
 

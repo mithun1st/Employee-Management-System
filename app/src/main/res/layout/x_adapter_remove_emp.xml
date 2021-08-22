@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/x_stuffList_view_id"
+    android:orientation="horizontal"
+    android:background="@drawable/x_remove_emp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/xname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:textColor="#3A3838"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Hello World"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="#FF9999"/>
+
+        <TextView
+            android:id="@+id/xid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="1234567890"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

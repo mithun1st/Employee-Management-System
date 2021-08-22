@@ -10,7 +10,7 @@
         android:id="@+id/xname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="14dp"
+        android:paddingLeft="18dp"
         android:textColor="#3A3838"
         android:textSize="20sp"
         android:textStyle="bold"

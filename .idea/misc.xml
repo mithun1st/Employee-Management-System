@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable-v24/add_emp_background1.xml" value="0.15462962962962962" />
         <entry key="app/src/main/res/drawable/add_emp_background.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/drawable/gradient_button_mail.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/gradient_button_main.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/ic_baseline_people_24.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.20625" />
@@ -14,18 +16,21 @@
         <entry key="app/src/main/res/drawable/ic_launcher1_foreground.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/drawable/main_button_background.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/x_dialog_view.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/x_remove_emp.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/x_stuff_list.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/activity_add_emp.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_edit_deta.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_stuff_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_remove_emp.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_stuff_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_view_emp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/addemp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/main_button_background.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/stuf_list.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/stuff_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/view_profile.xml" value="0.19010416666666666" />
-        <entry key="app/src/main/res/layout/x_adapter_stuff_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/x_adapter_remove_emp.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/x_adapter_stuff_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/x_dialog_view.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_option.xml" value="0.1" />
       </map>

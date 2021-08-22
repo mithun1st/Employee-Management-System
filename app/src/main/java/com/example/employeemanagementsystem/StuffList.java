@@ -15,9 +15,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ListEmp extends AppCompatActivity {
+public class StuffList extends AppCompatActivity {
 
     private ListView lv;
+    private TextView tv;
 
     ArrayList<String> id=new ArrayList<String>(0);
     ArrayList<String> name=new ArrayList<String>(0);
@@ -36,10 +37,11 @@ public class ListEmp extends AppCompatActivity {
         setContentView(R.layout.activity_stuff_list);
 
         lv=findViewById(R.id.stuffListId);
+        tv=findViewById(R.id.tvempno);
 
 
-        Cursor cu=new DB1(ListEmp.this).readAllStuffFromDb();
-        Toast.makeText(ListEmp.this,"Total "+cu.getCount()+" Record Found",Toast.LENGTH_SHORT);
+        Cursor cu=new DB1(StuffList.this).readAllStuffFromDb();
+        Toast.makeText(StuffList.this,"Total "+cu.getCount()+" Record Found",Toast.LENGTH_SHORT);
         while (cu.moveToNext()){
             id.add(cu.getString(0));
             name.add(cu.getString(1));
@@ -51,8 +53,9 @@ public class ListEmp extends AppCompatActivity {
         }
 
 
-        StuffAdapterClass sac=new StuffAdapterClass(ListEmp.this, name, id);
+        StuffAdapterClass sac=new StuffAdapterClass(StuffList.this, name, id);
         lv.setAdapter(sac);
+        tv.setText("Total Employee: "+String.valueOf(lv.getCount()));
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
