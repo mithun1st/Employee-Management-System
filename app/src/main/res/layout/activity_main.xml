@@ -30,12 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_below="@+id/appTitle"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginLeft="17dp"
         android:background="#000"
-        android:backgroundTint="#057107"/>
-
-
+        android:backgroundTint="#057161"/>
 
 
 

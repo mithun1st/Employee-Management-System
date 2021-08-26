@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_credit_card_24"
                 android:textSize="18sp"
-                android:text="ID Number:"/>
+                android:text="ID Num.:"/>
         </LinearLayout>
 
         <TextView
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_person_outline_24"
             android:textSize="18sp"
-            android:text="Designation:"/>
+            android:text="Desig.:"/>
 
         <TextView
             android:id="@+id/tvDesig"

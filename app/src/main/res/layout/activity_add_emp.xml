@@ -14,11 +14,12 @@
         android:layout_margin="8dp"
         android:textSize="32sp"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="9dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#553778"
+        android:background="@drawable/gradient_background"
         android:text="Add Employee"/>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -80,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:hint=" Type Employee name"
-                android:inputType="text"/>
+                android:inputType="textCapWords"/>
         </LinearLayout>
 
 
@@ -109,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:hint=" Input Designation Here"
-                android:inputType="text"/>
+                android:inputType="textCapWords"/>
         </LinearLayout>
 
 

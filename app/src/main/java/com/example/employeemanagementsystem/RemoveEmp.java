@@ -24,7 +24,7 @@ public class RemoveEmp extends AppCompatActivity {
 
     private ListView lv;
     private SearchView sv;
-    private TextView tv;
+    private TextView tv,sc;
     private Button delete;
 
     ArrayAdapter <String > adp;
@@ -50,17 +50,10 @@ public class RemoveEmp extends AppCompatActivity {
         sv=findViewById(R.id.sv);
         delete=findViewById(R.id.delete);
         tv=findViewById(R.id.tvempno);
+        sc=findViewById(R.id.snack);
 
 
         fetch();
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(RemoveEmp.this,id.get(i),Toast.LENGTH_SHORT).show();
-                lv.setSelection(1);
-            }
-        });
 
 
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -114,6 +107,17 @@ public class RemoveEmp extends AppCompatActivity {
 
     //----------------function
 
+    public void snackBar(){
+        if(lv.getCount()==0){
+            lv.setVisibility(View.GONE);
+            sc.setVisibility(View.VISIBLE);
+        }
+        else {
+            lv.setVisibility(View.VISIBLE);
+            sc.setVisibility(View.GONE);
+        }
+    }
+
     public void fetch(){
         Cursor cu=new DB1(RemoveEmp.this).readAllStuffFromDb();
 
@@ -134,10 +138,12 @@ public class RemoveEmp extends AppCompatActivity {
             salary.add(cu.getString(5));
             join.add(cu.getString(6));
         }
-        //adp=new RemoveAdapterClass(RemoveEmp.this, name, id);
+
         adp=new ArrayAdapter<String>(RemoveEmp.this, android.R.layout.simple_list_item_multiple_choice,id);
         lv.setAdapter(adp);
-        tv.setText("Total Employee Number: "+String.valueOf(lv.getCount()));
+        tv.setText("Total Employee: "+String.valueOf(lv.getCount()));
+
+        snackBar();
     }
 
 

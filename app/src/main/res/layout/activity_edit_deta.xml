@@ -7,16 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".EditDeta">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="9dp"
         android:textSize="32sp"
         android:gravity="center"
         android:padding="9dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#553778"
+        android:background="@drawable/gradient_background"
         android:text="Edit Employee Info"/>
 
 
@@ -45,8 +46,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:hint=" Edit Employee name"
-                android:inputType="text"/>
+                android:inputType="textCapWords"/>
         </LinearLayout>
 
 
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:hint=" Edit Designation here"
-                android:inputType="text"/>
+                android:inputType="textCapWords"/>
         </LinearLayout>
 
 
@@ -186,7 +186,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:hint="Update Employee Salary"
+                android:hint=" Employee Salary"
                 android:inputType="numberDecimal"/>
         </LinearLayout>
     </LinearLayout>

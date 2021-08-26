@@ -1,11 +1,14 @@
 package com.example.employeemanagementsystem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -45,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -56,14 +57,59 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onCreateOptionsMenu(menu);
     }
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId()==R.id.about){
+            about();
             Toast.makeText(MainActivity.this,"Mahadi Hassan",Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //function
+    public void about(){
+        AlertDialog adAbout;
+        AlertDialog.Builder abAbout=new AlertDialog.Builder(this);
+
+        abAbout.setIcon(R.drawable.ic_baseline_perm_identity_24);
+        abAbout.setTitle("Build & Develop by");
+        //ab.setMessage("");
+        abAbout.setCancelable(false);
+
+        //
+        LayoutInflater li=getLayoutInflater();
+        View v= (View) li.inflate(R.layout.about,findViewById(R.id.cv));
+        abAbout.setView(v);
+        //
+
+        abAbout.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+//
+//
+//        ab.setNeutralButton("Nu+", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+
+
+        abAbout.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        adAbout=abAbout.create();
+        adAbout.show();
     }
 
 

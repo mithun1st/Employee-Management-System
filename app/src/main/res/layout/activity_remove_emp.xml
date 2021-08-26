@@ -11,14 +11,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="0dp"
         android:textSize="32sp"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="9dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#553778"
-        android:text="Delete Employee"/>
+        android:background="@drawable/gradient_background"
+        android:text="Remove Employee"/>
+
+
 
 
 
@@ -54,6 +55,19 @@
             android:dividerHeight="4dp"
             android:choiceMode="multipleChoice"
             android:divider="#AFA7FF"/>
+
+        <TextView
+            android:id="@+id/snack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Employee Found!"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="normal"
+            android:typeface="monospace"
+            android:textSize="30sp"/>
+
+
     </LinearLayout>
 
 

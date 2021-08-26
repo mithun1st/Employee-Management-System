@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class StuffList extends AppCompatActivity {
 
     private ListView lv;
-    private TextView tv;
+    private TextView tv,sc;
 
     ArrayList<String> id=new ArrayList<String>(0);
     ArrayList<String> name=new ArrayList<String>(0);
@@ -38,6 +38,7 @@ public class StuffList extends AppCompatActivity {
 
         lv=findViewById(R.id.stuffListId);
         tv=findViewById(R.id.tvempno);
+        sc=findViewById(R.id.snack);
 
 
         Cursor cu=new DB1(StuffList.this).readAllStuffFromDb();
@@ -57,12 +58,28 @@ public class StuffList extends AppCompatActivity {
         lv.setAdapter(sac);
         tv.setText("Total Employee: "+String.valueOf(lv.getCount()));
 
+        //snack view
+        snackBar();
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 dialog(i);
             }
         });
+    }
+
+    //function
+
+    public void snackBar(){
+        if(lv.getCount()==0){
+            lv.setVisibility(View.GONE);
+            sc.setVisibility(View.VISIBLE);
+        }
+        else {
+            lv.setVisibility(View.VISIBLE);
+            sc.setVisibility(View.GONE);
+        }
     }
 
     public void dialog(int i){

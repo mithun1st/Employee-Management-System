@@ -7,18 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".ViewEmp">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:textSize="32sp"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="9dp"
         android:textStyle="bold"
         android:textColor="#fff"
-        android:background="#553778"
+        android:background="@drawable/gradient_background"
         android:text="View Profile"/>
+
 
 
     <LinearLayout

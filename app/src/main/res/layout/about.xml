@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/ll"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        app:cardCornerRadius="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center"
+            android:background="#4C63FF"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/mithun"
+                android:scaleType="centerCrop"
+                android:layout_width="210dp"
+                android:layout_height="200dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="4dp"
+                android:text="Mahadi Hassan\nMIHTUN"
+                android:textColor="#000B51"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="mithun.2121@yahoo.com"
+                android:textStyle="normal"
+                android:autoLink="email"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="https://github.com/mithun1st/"
+                android:textStyle="normal"
+                android:autoLink="web"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="http://mithun1st.blogspot.com/"
+                android:textStyle="normal"
+                android:autoLink="web"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
