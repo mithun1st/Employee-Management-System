@@ -29,7 +29,6 @@ public class AddEmp extends AppCompatActivity {
         addEmp=findViewById(R.id.addEmp);
 
 
-
         addEmp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,16 +83,16 @@ public class AddEmp extends AppCompatActivity {
             name.requestFocus();
             ch=false;
         }
-        else if (sphone.isEmpty() && smail.isEmpty()){
-            phone.setError("Phone Or Email must have fill at least one field !");
-            mail.setError("Phone Or Email must have fill at least one field !");
-
-            mail.requestFocus();
+        else if (sphone.isEmpty()){
+            phone.setError("Phone field is Empty!");
             phone.requestFocus();
-
+            ch=false;
+        }
+        else if (smail.isEmpty()){
+            mail.setError("Email field is Empty !");
+            mail.requestFocus();
             ch=false;
         }
         return ch;
     }
-
 }

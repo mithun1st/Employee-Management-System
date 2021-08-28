@@ -64,7 +64,7 @@ public class ViewEmp extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 DB1 o=new DB1(ViewEmp.this);
                 cu=o.ViewEmpDB(actv.getText().toString());
-                getDataFromDB();
+                getDataFromCursor();
                 setDataToTV();
                 clearStringBuilder();
                 actv.setEnabled(false);
@@ -78,7 +78,7 @@ public class ViewEmp extends AppCompatActivity {
             public void onClick(View view) {
                 DB1 o=new DB1(ViewEmp.this);
                 cu=o.ViewEmpDB(actv.getText().toString());
-                getDataFromDB();
+                getDataFromCursor();
                 setDataToTV();
                 clearStringBuilder();
             }
@@ -101,7 +101,7 @@ public class ViewEmp extends AppCompatActivity {
     }
 
 
-    public void getDataFromDB(){
+    public void getDataFromCursor(){
         while (cu.moveToNext()){
             id.append(cu.getString(0).toString());
             name.append(cu.getString(1).toString());
@@ -142,4 +142,5 @@ public class ViewEmp extends AppCompatActivity {
         salary.setLength(0);
         join.setLength(0);
     }
+
 }

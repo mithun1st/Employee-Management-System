@@ -43,7 +43,7 @@ public class DB1 extends SQLiteOpenHelper {
 
 
     //--------------------------------------------operation
-    //read
+    //read stuff
     public Cursor readAllStuffFromDb(){
         Cursor cu=null;
         String q1="SELECT * FROM "+ tabName;
@@ -59,6 +59,7 @@ public class DB1 extends SQLiteOpenHelper {
     //add emp
     public String addEmpData(String sid, String sname, String sdesig, String sphone, String smail, String ssalary) {
         String q="INSERT INTO "+tabName+" ("+col1+", "+col2+", "+col3+", "+col4+", "+col5+", "+col6+", "+col7+") VALUES "+" ("+sid+", '"+sname+"', '"+sdesig+"', '"+sphone+"', '"+smail+"', "+ssalary+",  CURRENT_DATE );";
+
         try {
             db.execSQL(q);
             return "Employee Added";
@@ -79,10 +80,10 @@ public class DB1 extends SQLiteOpenHelper {
         try{
             Integer.parseInt(s);
             q1="SELECT * FROM "+tabName+" WHERE "+col1+" = "+s+";";
-            System.out.println(q1);
+            System.out.println(q1+"\nint");
         }catch (Exception e){
             q1="SELECT * FROM "+tabName+" WHERE "+col2+" = \'"+s+"\';";
-            System.out.println(q1);
+            System.out.println(q1+"\nstring");
         }
 
         try{

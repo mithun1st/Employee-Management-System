@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editEmp=findViewById(R.id.editEmp);
         removeEmp=findViewById(R.id.removeEmp);
         listEmp=findViewById(R.id.stuffListButtonId);
-
 
         addEmp.setOnClickListener(this);
         viewEmp.setOnClickListener(this);
