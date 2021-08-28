@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
                 android:hint=" Input Designation Here"
-                android:inputType="textCapWords"/>
+                android:inputType="textCapCharacters"/>
         </LinearLayout>
 
 

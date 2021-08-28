@@ -63,7 +63,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(item.getItemId()==R.id.about){
             about();
+        }
+
+        if(item.getItemId()==R.id.share){
+            Intent is=new Intent(Intent.ACTION_SEND);
+            is.setType("text/plain");
+
+            is.putExtra(Intent.EXTRA_SUBJECT,"Employee Management System");
+            is.putExtra(Intent.EXTRA_TEXT,"share with your friends: https://github.com/mithun1st");
+
+            startActivity(Intent.createChooser(is,"Share Now"));
+        }
+
+        if(item.getItemId()==R.id.feedback){
+
+            Intent i=new Intent(MainActivity.this,FeedBack.class);
+            startActivity(i);
+
+        }
+
+
+
+        if(item.getItemId()==R.id.develop){
             Toast.makeText(MainActivity.this,"Mahadi Hassan",Toast.LENGTH_SHORT).show();
+            develop();
         }
 
         return super.onOptionsItemSelected(item);
@@ -105,6 +128,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+            }
+        });
+
+        adAbout=abAbout.create();
+        adAbout.show();
+    }
+
+
+
+
+
+    public void develop(){
+        AlertDialog adAbout;
+        AlertDialog.Builder abAbout=new AlertDialog.Builder(this);
+
+        abAbout.setIcon(R.drawable.ic_baseline_perm_identity_24);
+        abAbout.setTitle("Build & Develop by");
+        //ab.setMessage("");
+        abAbout.setCancelable(false);
+
+        //
+        LayoutInflater li=getLayoutInflater();
+        View v= (View) li.inflate(R.layout.about,findViewById(R.id.cv));
+        abAbout.setView(v);
+
+
+        abAbout.setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
             }
         });
 

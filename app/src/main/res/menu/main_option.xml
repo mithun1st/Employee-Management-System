@@ -18,4 +18,9 @@
         android:title="Feedback"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/develop"
+        android:title="Develop By"
+        app:showAsAction="never"/>
+
 </menu>

@@ -55,7 +55,7 @@ public class ViewEmp extends AppCompatActivity {
         System.out.println(ar);
 
         ArrayAdapter <String> ad=new ArrayAdapter<>(ViewEmp.this, android.R.layout.simple_list_item_1, ar);
-        actv.setThreshold(1);
+        actv.setThreshold(0);
         actv.setAdapter(ad);
 
 

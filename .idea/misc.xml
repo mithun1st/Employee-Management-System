@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/add_emp_background1.xml" value="0.15462962962962962" />
         <entry key="app/src/main/res/drawable/add_emp_background.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/drawable/empicon_background.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/drawable/gradient_button_mail.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/gradient_button_main.xml" value="0.1" />
@@ -13,15 +14,21 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_remove_24.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.1203125" />
+        <entry key="app/src/main/res/drawable/ic_launcher1_background.xml" value="0.1203125" />
         <entry key="app/src/main/res/drawable/ic_launcher1_foreground.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/drawable/main_button_background.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/work_background.xml" value="0.20625" />
+        <entry key="app/src/main/res/drawable/work_foreground.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/x_dialog_view.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/x_remove_emp.xml" value="0.20625" />
         <entry key="app/src/main/res/drawable/x_stuff_list.xml" value="0.20625" />
-        <entry key="app/src/main/res/layout/activity_add_emp.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/about.xml" value="0.18206521739130435" />
+        <entry key="app/src/main/res/layout/activity_add_emp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_edit_deta.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_remove_emp.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_feed_back.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_remove_emp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_stuff_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_view_emp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/addemp.xml" value="0.22" />
@@ -32,7 +39,11 @@
         <entry key="app/src/main/res/layout/x_adapter_remove_emp.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/x_adapter_stuff_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/x_dialog_view.xml" value="0.25" />
-        <entry key="app/src/main/res/menu/main_option.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/main_option.xml" value="0.18" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/empicon.xml" value="0.1203125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/empicon_round.xml" value="0.1203125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/workico.xml" value="0.1203125" />
       </map>
     </option>
   </component>
